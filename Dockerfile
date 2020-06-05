@@ -5,7 +5,7 @@ COPY texlive.profile /tmp
 ENV PATH /usr/local/texlive/2020/bin/x86_64-linuxmusl:${PATH}
 ENV TEXLIVE_URL http://mirror.ctan.org/systems/texlive/tlnet
  
-RUN apk --no-cache add libx11 libxext libxrender libstdc++ freetype fontconfig libssl1.1 perl wget
+RUN apk --no-cache add libx11 libxext libxrender libstdc++ freetype fontconfig libssl1.1 perl wget \
  && apk --no-cache add --virtual install-dependencies xz tar \
  && mkdir /tmp/install-tl-unx \
  && cd /tmp/install-tl-unx \
